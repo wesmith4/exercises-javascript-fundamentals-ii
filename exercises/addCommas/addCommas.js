@@ -17,7 +17,7 @@ function sliceNumber(num){
   let numberString = num.toString();
   while (numberString.length >= 3){
     parts.push(numberString.slice(-3));
-    numberString = numberString.substring(0, numberString.length -3);
+    numberString = numberString.slice(0, -3);
   }
   if (numberString.length > 0){
     parts.push(numberString);

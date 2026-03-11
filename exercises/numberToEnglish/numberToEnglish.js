@@ -111,7 +111,7 @@ function numberToEnglish(num) {
   }
 
   /// Join the strings in the descriptionWords array to form our result.
-  let result = descriptionWords.join(' ');
+  let result = descriptionWords.join(' ').trim();
   
   /// Return the final result of the function
   return result;
@@ -142,14 +142,14 @@ if (require.main === module) {
   // How else will you know if your code does what you expect,
   // or whether you've broken your existing code without realizing?
 
-  console.log(numberToEnglish(100) === 'one hundred ');
+  console.log(numberToEnglish(100) === 'one hundred');
   console.log(numberToEnglish(0) === 'zero');
-  console.log(numberToEnglish(10) === 'ten ');
-  console.log(numberToEnglish(419) === 'four hundred nineteen ');
-  console.log(numberToEnglish(1423) === 'one thousand four hundred twenty three ');
+  console.log(numberToEnglish(10) === 'ten');
+  console.log(numberToEnglish(419) === 'four hundred nineteen');
+  console.log(numberToEnglish(1423) === 'one thousand four hundred twenty three');
   console.log(numberToEnglish(1000000) === 'one million');
-  console.log(numberToEnglish(409) === 'four hundred nine ');
-  console.log(numberToEnglish(1000500) === 'one million five hundred ');
+  console.log(numberToEnglish(409) === 'four hundred nine');
+  console.log(numberToEnglish(1000500) === 'one million five hundred');
 }
 
 module.exports = numberToEnglish;
